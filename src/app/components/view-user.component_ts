@@ -1,0 +1,121 @@
+import { Component, OnInit, ViewChild } from "@angular/core";
+import { ActivatedRoute, Router } from "@angular/router";
+import { UserService } from "../services/user.service";
+
+@Component({
+  selector: "app-view-user",
+  template: `
+    <div class="container-flex">
+      <div class="row ds-banner-row">
+        <div class="col-md-6">
+          <h4>User Profile View</h4>
+        </div>
+
+        <div class="col-md-6">
+          <div class="row">
+            <div class="col-md-12"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid ds-form-container">
+      <form #f="ngForm" novalidate>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4   ds-profile-continer">
+              <div class="row">
+                <div class="col-md-12 ds-profile-col">
+                  <img
+                    class="ds-img-border"
+                    width="80%"
+                    src="{{ user.avatar }}"
+                  />
+                  <p class="ds-customp">
+                    {{ user.firstName.toUpperCase() }}
+                    {{ user.lastName.toUpperCase() }}
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            
+
+            <div class="col-md-8 ds-profileinfo-continer">
+              <div class="row">
+                <div class="col-md-6">
+                  <p class="ds-profile-inf">Profile information</p>
+                </div>
+
+                <div class="col-md-6"></div>
+              </div>
+              <div class="row">
+                <div class="col-md-3">
+                  <p class="ds-profile-elem">Email:</p>
+                </div>
+
+                <div class="col-md-9">
+                  <p class="">{{ user.email }}</p>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-3">
+                  <p class="ds-profile-elem">Phone:</p>
+                </div>
+
+                <div class="col-md-9">
+                  <p class="">{{ user.phone }}</p>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-3">
+                  <p class="ds-profile-elem">Birthdate:</p>
+                </div>
+
+                <div class="col-md-9">
+                  <p class="">
+                    {{ user.birthday }}
+                  </p>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-3">
+                  <p class="ds-profile-elem">About:</p>
+                </div>
+
+                <div class="col-md-9">
+                  <textarea disabled class="">{{ user.about }}> </textarea>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12 ds-v-space">
+                  <button class="ds-cancel-button" routerLink="/">Back</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  `,
+})
+export class ViewUserComponent implements OnInit {
+  user: any;
+  id: any;
+  constructor(
+    private _Activatedroute: ActivatedRoute,
+    private userService: UserService,
+    private router: Router
+  ) {}
+  @ViewChild("f") form: any;
+
+  ngOnInit() {
+    this.id = this._Activatedroute.snapshot.params["id"];
+    let users = this.userService.getUsers();
+    this.user = users.find((p: any) => p.id == this.id);
+    console.log(this.user);
+  }
+}

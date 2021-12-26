@@ -1,0 +1,54 @@
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+
+
+/** @media (max-width: 992px) {
+    .navbar-collapse {
+        position: fixed;
+        top: 50px;
+        left: 0;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 15px;
+        width: 75%;
+        height: 100%;
+    }
+
+    .navbar-collapse.collapsing {
+        bottom: 75%;
+        transition: height 0s ease;
+    }
+
+    .navbar-collapse.show {
+        bottom: 0;
+        transition: bottom 300ms ease-in-out;
+    }
+
+    .navbar-toggler.collapsed ~ .navbar-collapse {
+        transition: bottom 500ms ease-in-out;
+    }
+}
+
+*/
+
+.custom-select {
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+    color: white;
+
+}
+
+
+.body {
+    min-height: 250vh;
+ //   display: flex;
+   // flex-direction: column;
+    background-color: #dbdbdb !important;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.ds-body {
+    background-color: #eaeaea;
+}
