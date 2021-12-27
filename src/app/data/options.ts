@@ -8,10 +8,10 @@ export const OPTIONS = [
     {
         option: "api"
     },*/
-    {
-        option: "On Boarding"
-    }, 
-    {
-        option: "Travel"
-    }
+    {option: "Recruitment"}, 
+    {option: "Travel"},
+    {option: "Performance"},
+    {option: "Attendance"},
+    {option: "Reports"},
+    {option: "Payroll"}
 ]

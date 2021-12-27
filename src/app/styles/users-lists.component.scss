@@ -34,7 +34,6 @@
 
 .ds-table {
   width: 100%;
-  margin-bottom: 1rem;
   color: #212529;
   border-style: solid;
   border-color: #f0f0f0;
@@ -42,6 +41,12 @@
   border-width: thin;
   background-color: white;
   border-radius: 0;
+  margin-top: 1rem;
+  min-height:calc(100% - 20px);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 th {
@@ -83,3 +88,39 @@ button.calendar:active {
   border: none;
   }
 
+
+
+  .hr-custom-hire-card {
+    margin-bottom: 2rem;
+  }
+
+  .hr-custom-img {
+    border-radius: 5rem;
+    width: 6rem;
+  }
+
+  .hr-custom-card-body {
+    background-color: #cecece7d; //#cecece1c;
+    border-style: none;
+    border-radius: 0px;
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .hr-custom-btn {
+    width: 9rem;
+    background-color: grey;
+    color: white;
+    border-style: none;
+    border-radius: 0;
+    margin-top: 3rem;
+}
+
+.hr-custom-hire-btn{
+  background-color: #57af72;
+  border-radius: 0px;
+  color: white;
+  width: 8rem;
+}

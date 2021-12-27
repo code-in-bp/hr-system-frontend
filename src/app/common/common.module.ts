@@ -1,13 +1,16 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { BannerComponent } from './banner.component';
 import { BreadcrumbComponent } from './breadcrumb.component';
 
 @NgModule({
-  imports: [ CommonModule],
+  imports: [ BrowserModule],
   declarations: [
-    BreadcrumbComponent
+    BreadcrumbComponent,
+    BannerComponent
     
   ],
-  exports: [BreadcrumbComponent]
+  exports: [BreadcrumbComponent, BannerComponent]
 })
 export class CommonFolderModule { }
