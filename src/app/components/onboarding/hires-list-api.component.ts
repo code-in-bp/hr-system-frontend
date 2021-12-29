@@ -9,20 +9,22 @@ import { HireApiService } from "src/app/services/hire.service";
     <div class="container">
       <div class="row">
       <div class="col-md-12 ds-table">
-          <button class="btn hr-custom-btn">Add New Hire</button>
+          <!--<button class="btn hr-custom-btn">Add New Hire</button>-->
+          <app-add-new-hire-modal></app-add-new-hire-modal>
         </div>
       </div>
       <div class="row">
         <div class="col-md-12 ds-table">
           <div class="card-group">
-            <div *ngFor="let h of this.hireService.hires" class="col-md-4">
+            <div *ngFor="let h of this.hireService.hires" class="col-md-3">
               <div (click)="btnClick('')" class=" hr-custom-hire-card">
                 <div class="hr-custom-card-body">
                   <div class="">
-                    <img class="hr-custom-img" src="" />
+                    <img class="hr-custom-img" src="/assets/user.png" />
                     <p>SerialNo. {{ h.serialNumber }}</p>
 
                     <h5>{{ h.firstName }} - {{ h.lastName }}</h5>
+                    <p>start date</p>
                     <button class="btn hr-custom-hire-btn">View</button>
                   </div>
                 </div>

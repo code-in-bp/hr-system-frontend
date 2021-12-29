@@ -82,14 +82,6 @@ import { USERS, OPTIONS } from "../data/options";
             ></a>
           </li>
 
-          <li class="nav-item active">
-            <a
-              class="nav-link ds-header-tabs"
-              style="color: black;"
-              routerLink="users-api"
-              >{{ options[3].option }} <span class="sr-only"></span
-            ></a>
-          </li>
         </ul>
       </div>
     </nav>

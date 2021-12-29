@@ -5,4 +5,5 @@ export interface IHire {
     serialNumber?: string;
     hireDate?: string;
     contractType?: string;
+    photo?: string;
 }

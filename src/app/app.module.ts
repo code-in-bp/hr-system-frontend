@@ -14,8 +14,8 @@ import { IndexComponentModule } from './components/index-component.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-  ],
+    AppComponent
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule,

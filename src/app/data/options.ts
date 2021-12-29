@@ -10,9 +10,9 @@ export const OPTIONS = [
     },*/
     {option: "Home"},
     {option: "On Boarding"}, 
-    {option: "Travel"},
+    {option: "Recruitment"},
     {option: "Performance"},
     {option: "Attendance"},
     {option: "Reports"},
-    {option: "Payroll"}
+    {option: "Travel"}
 ]

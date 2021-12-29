@@ -33,7 +33,7 @@ export class MainComponent {
 
      cardTitles = [
          { title: "On Boarding", url: "onboarding"},
-         { title: "Attendance", url: "attendance"},
+         { title: "Recruitment", url: "recruitment"},
          { title: "Performance", url: "performance"},
          { title:"Travel", url: "travel"},
          { title: "Reports", url: "reports"},
