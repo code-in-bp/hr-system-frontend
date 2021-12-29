@@ -21,7 +21,9 @@
 }
 
 .hr-custom-card {
-    border: none;
+    border: solid;
+    border-width: thin;
+    border-color: rgb(180, 180, 180);
     border-radius: 0rem;
 }
 

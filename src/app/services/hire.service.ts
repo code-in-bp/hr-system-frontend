@@ -1,13 +1,15 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
-import { environment } from "src/environments/environment.prod";
-import { Observable } from "rxjs";
+import { environment } from "src/environments/environment";
+import { Observable, Subscription } from "rxjs";
 import { IHire } from "../models/IHire";
 
 @Injectable({
   providedIn: "root",
 })
 export class HireApiService {
+  hires?: IHire[];
+
   constructor(private http: HttpClient) {
     console.log("BaseURL -> " + environment.baseUrl);
   }
@@ -30,5 +32,20 @@ export class HireApiService {
 
   deleteHire(id: any): Observable<any> {
     return this.http.delete(environment.baseUrl + id);
+  }
+
+
+
+  getAllHires1() {
+    this.http.get<IHire[]>(environment.baseUrl).subscribe(
+      data => {
+        this.hires = data;
+        console.log(data);
+      },
+      error => {
+        console.log(error);
+      }
+    );
+
   }
 }

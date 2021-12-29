@@ -22,7 +22,7 @@ const routes: Routes = [
 
 
 {path: '', component: MainComponent},
-{path: 'hires', component: HiresListApiComponent}
+{path: 'onboarding', component: HiresListApiComponent}
 ];
 
 @NgModule({
