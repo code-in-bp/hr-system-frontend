@@ -49,7 +49,7 @@ import { HireApiService } from "src/app/services/hire.service";
         <div class="col-md-9 ds-table">
           <div class="card-group">
             <div *ngFor="let h of this.hireService.hires" class="col-md-3">
-              <div (click)="btnClick('')" class=" hr-custom-hire-card">
+              <div class=" hr-custom-hire-card">
                 <div class="hr-custom-card-body">
                   <div class="">
                     <img class="hr-custom-img" src="/assets/user.png" />

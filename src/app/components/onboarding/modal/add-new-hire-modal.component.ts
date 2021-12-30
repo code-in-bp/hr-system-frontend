@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 import { IHire } from "src/app/models/IHire";
@@ -252,7 +252,7 @@ import { HireApiService } from "src/app/services/hire.service";
     
     `
 })
-export class AddNewHireModalComponent {
+export class AddNewHireModalComponent implements OnInit{
 
     closeResult: string = '';
     hire: IHire = {
@@ -272,6 +272,9 @@ export class AddNewHireModalComponent {
   
 
     constructor(private modalService: NgbModal, private hireService: HireApiService, private router: Router) {}
+  ngOnInit(): void {
+    this.hireService.getAllHires1();
+  }
 
   
     open(content:any) {
@@ -314,14 +317,13 @@ export class AddNewHireModalComponent {
       this.hireService.createHire(data)
         .subscribe(
           res => {
-           // this.router.navigate(['/', 'onboarding']);
-
             console.log(res);
           },
           error => {
             console.log(error);
           }
         )
+        window.location.reload();
         this.router.navigate(['/onboarding']);
         
 

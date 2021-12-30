@@ -75,15 +75,19 @@ import { USERS, OPTIONS } from "../data/options";
             ></a>
           </li>
 
-         <!-- <li class="nav-item active">
+          <li class="nav-item active">
             <a
               class="nav-link ds-header-tabs"
               style="color: black;"
               routerLink="users-api"
               routerLinkActive="active-link"
-              >{{ options[2].option }} <span class="sr-only"></span
-            ></a>
-          </li> -->
+              (click)="refreshBtn();"
+              >Refresh<span class="sr-only"></span
+           
+              >
+          
+          </a>
+          </li> 
 
         </ul>
       </div>
@@ -98,4 +102,8 @@ export class HeaderComponent {
   faCoffee = faCoffee;
 
   options = OPTIONS;
+
+  refreshBtn() {
+    window.location.reload();
+  }
 }

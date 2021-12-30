@@ -4,6 +4,7 @@ import { environment } from "src/environments/environment";
 import { Observable, Subscription } from "rxjs";
 import { IHire } from "../models/IHire";
 
+
 @Injectable({
   providedIn: "root",
 })
@@ -13,6 +14,7 @@ export class HireApiService {
   constructor(private http: HttpClient) {
     console.log("BaseURL -> " + environment.baseUrl);
   }
+
 
   getAllHires(): Observable<IHire[]> {
     return this.http.get<IHire[]>(environment.baseUrl);
@@ -53,8 +55,6 @@ export class HireApiService {
 
   }
 
-
-  hire: IHire;
 
   searchforSerialNumber(serialnum: string): any {
    /* this.http.get(environment.baseUrl + "/search/" + serialnum).subscribe(
