@@ -54,8 +54,15 @@ export class HireApiService {
   }
 
 
+  hire: IHire;
 
-  searchforSerialNumber(serialnum: string) {
+  searchforSerialNumber(serialnum: string): any {
+   /* this.http.get(environment.baseUrl + "/search/" + serialnum).subscribe(
+      data => {
+        this.hires = [data]
+      }
+    ) */
+
       this.getAllHires().subscribe(
         data => {
           this.hires = data.filter(d => d.serialNumber === serialnum)},

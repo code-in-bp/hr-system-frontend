@@ -25,6 +25,7 @@ import { IndexComponentModule } from './components/index-component.module';
     FontAwesomeModule,
     FormsModule, // changed to reactive form
     ReactiveFormsModule,
+    FormsModule,
     HttpClientModule,
     IndexComponentModule,
     

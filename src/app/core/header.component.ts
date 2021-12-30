@@ -75,7 +75,7 @@ import { USERS, OPTIONS } from "../data/options";
             ></a>
           </li>
 
-          <li class="nav-item active">
+         <!-- <li class="nav-item active">
             <a
               class="nav-link ds-header-tabs"
               style="color: black;"
@@ -83,7 +83,7 @@ import { USERS, OPTIONS } from "../data/options";
               routerLinkActive="active-link"
               >{{ options[2].option }} <span class="sr-only"></span
             ></a>
-          </li>
+          </li> -->
 
         </ul>
       </div>

@@ -27,7 +27,12 @@ import { HireApiService } from "src/app/services/hire.service";
                 <div class="form-group">
                 <h2>Search</h2>
                   <!-- <label for="serialNumber">Serial Number</label> -->
-                  <input id="serialNumber" [formControl]="serialNumber" type="text" class="form-control"  placeholder="Serial Number ex. HR12345">
+                  <input 
+                  id="serialNumber" 
+                  [formControl]="serialNumber" 
+                  type="text" 
+                  class="form-control"  
+                  placeholder="Serial Number">
                 </div>
                 <button type="button" class="btn hr-search-btn" (click)="search()">Search</button>
             </div>
@@ -48,10 +53,8 @@ import { HireApiService } from "src/app/services/hire.service";
                 <div class="hr-custom-card-body">
                   <div class="">
                     <img class="hr-custom-img" src="/assets/user.png" />
-                    <p>SerialNo. {{ h.serialNumber }}</p>
-
-                    <h5>{{ h.firstName }} - {{ h.lastName }}</h5>
-                    <p>start date</p>
+                    <p>SerialNo. {{ h.serialNumber }} <br> Hire Date. {{h.hireDate}}</p>
+                    <h4>{{ h.firstName }} - {{ h.lastName }}</h4>
                     <button class="btn hr-custom-hire-btn">View</button>
                   </div>
                 </div>
@@ -71,9 +74,7 @@ export class HiresListApiComponent implements OnInit{
   serialNumber = new FormControl('');  
   
   ngOnInit(): void {
-    this.hireService.getAllHires1();
-    //this.hireService.searchforSerialNumber(this.serialNumber.value);
-    
+    this.hireService.getAllHires1();    
   }
 
 
@@ -89,73 +90,8 @@ export class HiresListApiComponent implements OnInit{
     } else {
       this.hireService.searchforSerialNumber(sn);
       console.log( this.hireService.searchforSerialNumber(sn));
-    }
-    
-    
+    } 
   }
-
- /* hires = [
-    {
-      firstName: "fName1",
-      lastName: "lName1",
-      serialNumber: "HR12345",
-      photoUrl: "https://randomuser.me/api/portraits/women/43.jpg",
-    },
-    {
-      firstName: "fName1",
-      lastName: "lName1",
-      serialNumber: "HR12345",
-      photoUrl: "https://randomuser.me/api/portraits/women/60.jpg",
-    },
-    {
-      firstName: "fName1",
-      lastName: "lName1",
-      serialNumber: "HR12345",
-      photoUrl: "https://randomuser.me/api/portraits/men/52.jpg",
-    },
-    {
-      firstName: "fName1",
-      lastName: "lName1",
-      serialNumber: "HR12345",
-      photoUrl: "https://randomuser.me/api/portraits/men/88.jpg",
-    },
-    {
-      firstName: "fName1",
-      lastName: "lName1",
-      serialNumber: "HR12345",
-      photoUrl: "https://randomuser.me/api/portraits/women/72.jpg",
-    },
-    {
-      firstName: "fName1",
-      lastName: "lName1",
-      serialNumber: "HR12345",
-      photoUrl: "https://randomuser.me/api/portraits/women/72.jpg",
-    },
-    {
-      firstName: "fName1",
-      lastName: "lName1",
-      serialNumber: "HR12345",
-      photoUrl: "https://randomuser.me/api/portraits/women/72.jpg",
-    },
-    {
-      firstName: "fName1",
-      lastName: "lName1",
-      serialNumber: "HR12345",
-      photoUrl: "https://randomuser.me/api/portraits/women/72.jpg",
-    },
-    {
-      firstName: "fName1",
-      lastName: "lName1",
-      serialNumber: "HR12345",
-      photoUrl: "https://randomuser.me/api/portraits/women/72.jpg",
-    },
-    {
-      firstName: "fName1",
-      lastName: "lName1",
-      serialNumber: "HR12345",
-      photoUrl: "https://randomuser.me/api/portraits/women/72.jpg",
-    },
-  ].slice(0, 9); */
 }
 
 
