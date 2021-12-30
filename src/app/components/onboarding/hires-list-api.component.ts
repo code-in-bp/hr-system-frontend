@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { FormControl } from "@angular/forms";
 import { Router } from "@angular/router";
 import { IHire } from "src/app/models/IHire";
 import { HireApiService } from "src/app/services/hire.service";
@@ -8,13 +9,39 @@ import { HireApiService } from "src/app/services/hire.service";
   template: `
     <div class="container">
       <div class="row">
-      <div class="col-md-12 ds-table">
-          <!--<button class="btn hr-custom-btn">Add New Hire</button>-->
-          <app-add-new-hire-modal></app-add-new-hire-modal>
-        </div>
+        <div class="col-md-12"><h1>On Boarding</h1></div>
+        
       </div>
+  
       <div class="row">
-        <div class="col-md-12 ds-table">
+        <div class="col-md-3">
+          <!--<button class="btn hr-custom-btn">Add New Hire</button>-->
+
+          <div class="col-md-12 hr-custom-container">
+          <app-add-new-hire-modal></app-add-new-hire-modal>
+
+          </div>
+          <div class="col-md-12 hr-custom-container2">
+          <form>   
+            <div class="col-md-12">   
+                <div class="form-group">
+                <h2>Search</h2>
+                  <!-- <label for="serialNumber">Serial Number</label> -->
+                  <input id="serialNumber" [formControl]="serialNumber" type="text" class="form-control"  placeholder="Serial Number ex. HR12345">
+                </div>
+                <button type="button" class="btn hr-search-btn" (click)="search()">Search</button>
+            </div>
+          </form>
+
+          </div>
+
+        </div>
+
+
+
+
+
+        <div class="col-md-9 ds-table">
           <div class="card-group">
             <div *ngFor="let h of this.hireService.hires" class="col-md-3">
               <div (click)="btnClick('')" class=" hr-custom-hire-card">
@@ -33,22 +60,39 @@ import { HireApiService } from "src/app/services/hire.service";
           </div>
         </div>
       </div>
+
+      
     </div>
   `,
 })
 export class HiresListApiComponent implements OnInit{
   constructor(private router: Router, public hireService: HireApiService) {}
-  hires = this.hireService.hires;
-  
+
+  serialNumber = new FormControl('');  
   
   ngOnInit(): void {
     this.hireService.getAllHires1();
+    //this.hireService.searchforSerialNumber(this.serialNumber.value);
+    
   }
 
 
   btnClick = (url: any) => {
     this.router.navigate(["/" + url]);
   };
+
+
+  search = () => {
+    const sn = this.serialNumber.value;
+    if(sn === "") {
+      this.hireService.getAllHires1();
+    } else {
+      this.hireService.searchforSerialNumber(sn);
+      console.log( this.hireService.searchforSerialNumber(sn));
+    }
+    
+    
+  }
 
  /* hires = [
     {
@@ -113,7 +157,5 @@ export class HiresListApiComponent implements OnInit{
     },
   ].slice(0, 9); */
 }
-function getAllHires() {
-  throw new Error("Function not implemented.");
-}
+
 

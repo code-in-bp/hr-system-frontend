@@ -26,7 +26,8 @@ import { IndexComponentModule } from './components/index-component.module';
     FormsModule, // changed to reactive form
     ReactiveFormsModule,
     HttpClientModule,
-    IndexComponentModule
+    IndexComponentModule,
+    
     
     
   ],

@@ -60,6 +60,7 @@ import { USERS, OPTIONS } from "../data/options";
               class="nav-link ds-header-tabs"
               style="color: black;"
               routerLink=""
+              routerLinkActive="active-link"
               >{{ options[0].option }} <span class="sr-only">(current)</span></a
             >
           </li>
@@ -69,6 +70,7 @@ import { USERS, OPTIONS } from "../data/options";
               class="nav-link ds-header-tabs"
               style="color: black;"
               routerLink="onboarding"
+              routerLinkActive="active-link"
               >{{ options[1].option }} <span class="sr-only"></span
             ></a>
           </li>
@@ -78,6 +80,7 @@ import { USERS, OPTIONS } from "../data/options";
               class="nav-link ds-header-tabs"
               style="color: black;"
               routerLink="users-api"
+              routerLinkActive="active-link"
               >{{ options[2].option }} <span class="sr-only"></span
             ></a>
           </li>

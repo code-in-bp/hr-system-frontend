@@ -79,7 +79,7 @@ import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
             
             </div>
             <div class="modal-footer">
-                <button type="button"  class="btn btn-outline-dark" (click)="modal.dismiss('Cross click')">Back</button>
+                <button type="button"  class="btn btn-outline-dark" (click)="modal.dismiss('Cross click')">Cancel</button>
                 <button type="submit" class="btn btn-outline-dark" (click)="this.save()">Add</button>
 
             </div>

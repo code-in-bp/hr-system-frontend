@@ -36,10 +36,10 @@ export class HireApiService {
 
 
 
-  getAllHires1() {
-    this.http.get<IHire[]>(environment.baseUrl).subscribe(
+  getAllHires1(): any {
+    this.getAllHires().subscribe(
       data => {
-        this.hires = data;
+        this.hires = data.slice(0,8);
         console.log(data);
       },
       error => {
@@ -47,5 +47,23 @@ export class HireApiService {
       }
     );
 
+
+ 
+    
+
+  }
+
+
+
+  searchforSerialNumber(serialnum: string) {
+      this.getAllHires().subscribe(
+        data => {
+          this.hires = data.filter(d => d.serialNumber === serialnum)},
+        error => {
+          console.log(error);
+        }
+      )
   }
 }
+
+
