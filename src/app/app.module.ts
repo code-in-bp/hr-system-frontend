@@ -14,8 +14,8 @@ import { IndexComponentModule } from './components/index-component.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-  ],
+    AppComponent
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -25,8 +25,10 @@ import { IndexComponentModule } from './components/index-component.module';
     FontAwesomeModule,
     FormsModule, // changed to reactive form
     ReactiveFormsModule,
+    FormsModule,
     HttpClientModule,
-    IndexComponentModule
+    IndexComponentModule,
+    
     
     
   ],

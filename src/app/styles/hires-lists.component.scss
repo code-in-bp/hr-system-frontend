@@ -34,7 +34,6 @@
 
 .ds-table {
   width: 100%;
-  margin-bottom: 1rem;
   color: #212529;
   border-style: solid;
   border-color: #f0f0f0;
@@ -42,6 +41,12 @@
   border-width: thin;
   background-color: white;
   border-radius: 0;
+  margin-top: 1rem;
+  min-height:calc(100% - 20px);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  // margin-left: 1rem;
+  // margin-right: 1rem;
 }
 
 th {
@@ -83,3 +88,80 @@ button.calendar:active {
   border: none;
   }
 
+
+
+  .hr-custom-hire-card {
+    margin-bottom: 2rem;
+  }
+
+  .hr-custom-img {
+    border-radius: 5rem;
+    width: 6rem;
+  }
+
+  .hr-custom-card-body {
+    background-color: #fff;
+    border-style: solid;
+    border-radius: 0px;
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-width: thin;
+    border-color: #acacac;
+  }
+
+  .hr-custom-btn {
+    width: auto;
+    background-color: grey;
+    color: white;
+    border-style: none;
+    border-radius: 0;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    height: 2.5rem;
+}
+
+.hr-custom-hire-btn{
+  background-color: #57af72;
+  border-radius: 0px;
+  color: white;
+  width: 8rem;
+}
+
+
+.hr-custom-container {
+  color: #212529;
+  border-style: solid;
+  border-color: #f0f0f0;
+  text-align: center;
+  border-width: thin;
+  background-color: white;
+  border-radius: 0;
+  margin-top: 1rem;
+  height: auto;
+}
+
+.hr-custom-container2 {
+  background-color: white;
+  height: auto;
+  margin-top: 2rem;
+  padding-top: 1rem;
+}
+
+.hr-search-btn {
+  background-color: gray;
+  color: white;
+  border-radius: 0;
+  width: auto;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  margin-bottom: 1rem;
+}
+
+.btn.hr-custom-btn:hover {
+  color: white;
+  background-color: #488df9;
+}

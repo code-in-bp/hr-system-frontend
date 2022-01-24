@@ -15,17 +15,24 @@
 }
 
 .hr-custom-margin {
-    margin-top: 2rem;
+    margin-top: 3rem;
     text-align: center;
     color: #343839e6;
 }
 
 .hr-custom-card {
-    border: none;
+    border: solid;
+    border-width: thin;
+    border-color: rgb(180, 180, 180);
     border-radius: 0rem;
 }
 
 .hr-custom-card:hover {
     background-color: #b69ed95e;
     cursor: pointer;
+}
+
+.hr-custom-p-margin {
+    margin-left: 1rem;
+    margin-bottom: 2rem;    
 }

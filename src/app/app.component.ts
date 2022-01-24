@@ -9,9 +9,9 @@ import { Component } from '@angular/core';
     <app-header-component></app-header-component>
     <app-content-component></app-content-component>
     <router-outlet></router-outlet>
-    <div class="clear"></div>
+   <!-- <div class="clear"></div>
     <app-footer-component></app-footer-component>
-    <!-- Footer -->
+       Footer -->
     </div>
     
   </div>

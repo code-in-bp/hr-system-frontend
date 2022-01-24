@@ -5,13 +5,16 @@ import { Router } from '@angular/router';
   selector: "app-main-component",
   template: `
     <div class="container hr-card-container">
+      <div class="row hr-custom-p-margin">
+        <h1>Welcome to HR System</h1>
+      </div>
       <div class="row"></div>
       <div class="card-group">
         <div *ngFor="let t of cardTitles" class="col-md-4">
-          <div (click)="btnClick(t.url);"  class="card hr-custom-card mb-3" style="max-width: 30rem; height: 8rem;">
+          <div (click)="btnClick(t.url);"  class="card hr-custom-card mb-3" style="max-width: 30rem; height: 10rem;">
             <div class="card-body">
               <div class="hr-custom-margin" >
-              <a>{{t.title}}</a>
+              <h5>{{t.title}}</h5>
             <!--  <h5>{{t.title}}</h5> -->
 
 
@@ -29,8 +32,8 @@ export class MainComponent {
   }
 
      cardTitles = [
-         { title: "On Boarding", url: "hires"},
-         { title: "Attendance", url: "attendance"},
+         { title: "On Boarding", url: "onboarding"},
+         { title: "Recruitment", url: "recruitment"},
          { title: "Performance", url: "performance"},
          { title:"Travel", url: "travel"},
          { title: "Reports", url: "reports"},

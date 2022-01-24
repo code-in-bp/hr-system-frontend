@@ -1,0 +1,21 @@
+.close:hover {
+    background-color: #e6e4e46b;
+}
+
+.modal.fade .modal-dialog {
+    transition: none; //transform 0.3s ease-out;
+    transform: none; //translate(0, -50px);
+}
+
+.fade {
+    transition: none; // opacity 0.15s linear;
+}
+
+.modal-dialog {
+    max-width: 800px;
+    margin: 1.75rem auto;
+}
+
+.label {
+    float: right;
+}
